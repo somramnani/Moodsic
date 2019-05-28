@@ -8,8 +8,8 @@
 		<title></title>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
- 
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
 
 	 
 
@@ -42,16 +42,22 @@
 				</ul>
 		</nav>
 		
-		<form class="box" action="" method="post">
+		<div class="box " id = "login_div"  method="post">
 			<h1>Login</h1>
-				<input type="text" name="" placeholder="Username">
-				<input type="password" name="" placeholder="Password">
-				<input type="submit" name="" value="Login">
-				<a href ="signup.html"> <input type="submit" action = "signup.html"  name="" value="Sign Up">
-				</a>		</form>
+				<input type="email" id = "email_field" placeholder="E-mail" >
+				<input type="password" id = "password_field" placeholder="Password">
+
+				<button onclick = "login()" class ="submit">Submit </button>
+		
+			</div>
+
+			<div id = "user_div " class = "loggedin-div displaynone">
+				<h3>Welcome User</h3>
+				<button>Logout</button>
+			</div>
 
 
 
-
+	<script src = "assets/javascript/logic.js"></script>
 	</body>
 </html>
