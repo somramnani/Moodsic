@@ -10,23 +10,23 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     //User is logged in 
     $("#user_div").addClass("displaynone")
     $("#login_div").removeClass("displaynone");
 
-    
-   
+
+
   } else {
     // User is not logged in
     $("#login_div").addClass("displaynone")
- 
+
 
   }
 });
 
-function login(){
+function login() {
   var userEmail = $("#email_field").val();
   var userPass = $("#password_field").val();
 
