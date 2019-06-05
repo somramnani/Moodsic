@@ -1,14 +1,10 @@
-
 var firebaseConfig = {
-  apiKey: "AIzaSyClKRbECK6qI-r0eg6SlI0Jjzm4b8wvR0k",
-  authDomain: "loginpageproject-8a668.firebaseapp.com",
-  databaseURL: "https://loginpageproject-8a668.firebaseio.com",
-  projectId: "loginpageproject-8a668",
-  storageBucket: "loginpageproject-8a668.appspot.com",
-  messagingSenderId: "124559163013",
-  appId: "1:124559163013:web:0d24aab2b0f18e50"
+  apiKey: "AIzaSyBnyOQkasRUlKo6Aay1tAswnw0Ij-e5mPE",
+  authDomain: "moodsic-ad584.firebaseapp.com",
+  databaseURL: "https://moodsic-ad584.firebaseio.com",
+  projectId: "moodsic-ad584",
+  storageBucket: "moodsic-ad584.appspot.com",
+  messagingSenderId: "376593131880",
+  appId: "1:376593131880:web:36cf307a01fabd37"
 };
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-
