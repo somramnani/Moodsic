@@ -10,9 +10,6 @@
   firebase.initializeApp(firebaseConfig);
 
 
-
-
-
   var $exampleText = $("#example-text");
   var $exampleDescription = $("#example-description");
   var $submitBtn = $("#submit");
