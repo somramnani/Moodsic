@@ -26,6 +26,7 @@ function login() {
   var userPass = $("#password_field").val();
 }
 
+
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
