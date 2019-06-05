@@ -1,3 +1,4 @@
+
 var firebaseConfig = {
   apiKey: "AIzaSyBnyOQkasRUlKo6Aay1tAswnw0Ij-e5mPE",
   authDomain: "moodsic-ad584.firebaseapp.com",
@@ -24,7 +25,6 @@ function login() {
   var userEmail = $("#email_field").val();
   var userPass = $("#password_field").val();
 }
-login();
 
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
