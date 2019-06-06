@@ -20,11 +20,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function login() {
-  var userEmail = $("#email_field").val();
-  var userPass = $("#password_field").val();
-}
-login();
 
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
