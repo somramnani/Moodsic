@@ -27,7 +27,7 @@
   var logOutBtn = $("#logout");
   var auth = firebase.auth();
   $("#signup_div").hide();
-  $("#body_div").hide();
+ 
 
 //________________________________________________________
 
@@ -86,7 +86,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   
     $("#login_div").addClass("fadeOut");
     $("#login_div").removeClass("fadeIn");
-    $("#body_div").show();
+    $("#body_div").removeClass("displaynone");
+    $("#body_div").addClass("fadeIn");
 
 
     // ...
@@ -96,7 +97,7 @@ firebase.auth().onAuthStateChanged(function(user) {
    
     $("#login_div").removeClass("fadeOut");
     $("#login_div").addClass("fadeIn");
-    $("#body_div").hide();
+    $("#body_div").addClass("displaynone");
     // ...
   }
 });
