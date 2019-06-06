@@ -27,8 +27,6 @@
   var logOutBtn = $("#logout");
   var auth = firebase.auth();
   $("#signup_div").hide();
- 
-
 //________________________________________________________
 
 //________________________________________________________
@@ -45,6 +43,11 @@
       console.log(error);
     });
   });
+
+  // Continue as guest
+  $("#guest_button").on("click", function() {
+    auth.signInAnonymously()
+  });
 //________________________________________________________
 
 //________________________________________________________
@@ -57,16 +60,15 @@
 
   // Add a sign up Event
   signUpBtn.on("click", function() {
+   
     var email = $("#email").val();
     var password = $("#password").val();
 
     auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
       console.log(error);
       console.log(email);
-     
-     
-
     });
+
     $("#signup_div").removeClass("fadeIn");
     $("#signup_div").addClass("fadeOut");
   });
@@ -74,9 +76,10 @@
 
 // Add a logout function
 logOutBtn.on("click", function() {
+  $("#login_div").removeClass("fadeIn");
   var auth = firebase.auth();
   auth.signOut();
-  $("#login_div").removeClass("fadeIn");
+
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
