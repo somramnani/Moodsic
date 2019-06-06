@@ -8,22 +8,15 @@
 		<link rel="icon" href="assets/images/me.jpg">
 		<title></title>
 
+		<!-- **************Bootstrap Links************** -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-
-	 
-
-		 <!-- My Style Sheet -->	 	
-
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<!-- My Style Sheets -->	 	
 	 	<link rel="stylesheet" href="styles/style.css"> 
-		 <link rel="stylesheet" href="styles/mobile.css">  
-		 <!-- Animate.css -->
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<link rel="stylesheet" href="styles/mobile.css">  
 	 <!-- *********************************************************************************** -->
-	
 	</head>
-
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -42,28 +35,50 @@
 					<a class="nav-link" href="#">Link</a>
 				</li>
 
+				<li class="nav-item">
+					<button id = "logout" >Logout </button>
+				</li>
 			</ul>
 	</nav>
+	<div>
 
-	<div class="box " id="login_div" method="post">
+	<!-- LOGIN PAGE -->
+	<div class="box animated" id="login_div" method="post">
 		<h1>Login</h1>
 		<input type="email" id="email_field" placeholder="E-mail">
 		<input type="password" id="password_field" placeholder="Password">
 
-		<button onclick="login()" class="submit">Login </button>
-		<button onclick="" class="submit">Sign Up </button>
+		<button onclick="" id = "login" class="submit">Login </button>
+		<button onclick="" id = "signupButton" class="submit">Sign Up </button>
 		<a href="">Sign in as Guest</a>
-
-	</div>
-
-	<div id="user_div " class="loggedin-div displaynone">
-		<h3>Welcome User</h3>
-		<button>Logout</button>
 	</div>
 
 
+	<!-- SIGN UP PAGE -->
+	<div class = "box animated " id = "signup_div" method ="post">
+		<h1>Sign Up</h1>
+		<input type = "text" id = "firstname" placeholder = "First Name">
+		<input type = "text" id = "lastname" placeholder = "Last Name">
+		<input type="email" id="email" placeholder="E-mail">
+		<input type="password" id="password" placeholder="Password">
+		<button onclick="" id = "signup" class="submit">Sign Up </button>
+	</div>
 
-	<script src="assets/javascript/logic.js"></script>
+
+	<!-- APP GOES HERE -->
+	<div class ="" id = "body_div">
+		<h1>Moodsic</h1>
+
+	</div>
+
+
+  <!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/index.js"></script>
+	
 </body>
 
 </html>

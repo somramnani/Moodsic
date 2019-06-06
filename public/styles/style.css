@@ -9,15 +9,31 @@ a{
   text-decoration: none;
 }
 
+#logout{
+  border: none;
+  background: none;
+	color: grey;
+	border: none;
+  padding: 0;
+  padding-left: 2px;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  transform: translateY(.5em);
+}
+
+
 .box {
   width: 500px;
   padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   background: #191919;
   text-align: center;
+  margin-left: -250px;
+  margin-top: -300px;
 }
 
 .box h1 {
@@ -27,7 +43,8 @@ a{
 }
 
 .box input[type="email"],
-.box input[type="password"] {
+.box input[type="password"],
+.box input[type="text"] {
   border: 0;
   background: none;
   display: block;
@@ -43,7 +60,8 @@ a{
 }
 
 .box input[type="email"]:focus,
-.box input[type="password"]:focus {
+.box input[type="password"]:focus,
+.box input[type="text"]:focus  {
   width: 280px;
   border-color: #2ecc71;
 }
@@ -73,3 +91,17 @@ a{
 .displaynone {
   display: none;
 }
+
+
+.animated{ 
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both; 
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}  
