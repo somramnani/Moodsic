@@ -1,3 +1,4 @@
+
 // var firebaseConfig = {
 //   apiKey: "AIzaSyClKRbECK6qI-r0eg6SlI0Jjzm4b8wvR0k",
 //   authDomain: "loginpageproject-8a668.firebaseapp.com",
