@@ -37,7 +37,8 @@
   loginBtn.on("click", function() {
     var email = $("#email_field").val();
     var password = $("#password_field").val();
-
+    $("#login_div").removeClass("delay-3s");
+ 
     //Sign in
     auth.signInWithEmailAndPassword(email, password).catch(function(error) {
       console.log(error);
@@ -47,6 +48,7 @@
   // Continue as guest
   $("#guest_button").on("click", function() {
     auth.signInAnonymously()
+    $("#login_div").removeClass("delay-3s");
   });
 //________________________________________________________
 
@@ -56,11 +58,13 @@
   signUpLink.on("click", function() {
     $("#signup_div").addClass("fadeIn");
     $("#signup_div").show();
+    $("#login_div").removeClass("delay-3s");
+  
   });
 
   // Add a sign up Event
   signUpBtn.on("click", function() {
-   
+  
     var email = $("#email").val();
     var password = $("#password").val();
 
@@ -79,6 +83,8 @@ logOutBtn.on("click", function() {
   $("#login_div").removeClass("fadeIn");
   var auth = firebase.auth();
   auth.signOut();
+  $("#login_div").removeClass("delay-3s");
+  
 
 });
 

@@ -16,10 +16,21 @@
 		<!-- My Style Sheets -->	 	
 	 	<link rel="stylesheet" href="styles/style.css"> 
 		<link rel="stylesheet" href="styles/mobile.css">  
+		<link rel="stylesheet" href="styles/splash.css">
+		<link rel="stylesheet" href="styles/mood.css">
 	 <!-- *********************************************************************************** -->
 	</head>
 
 	<body>
+
+		<!-- Splash Screen-->
+		<div id="splash" class="flex-container">
+			<div class="flex-item">
+			  <h2 id="splashHeader">Moodsic<h2>
+			</div>
+		  </div>
+	<!-- Splash End -->
+
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   		<a class="navbar-brand" href="#">Moodsic</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,10 +53,10 @@
 				</li>
 			</ul>
 	</nav>
-	<div>
+	
 
 	<!-- LOGIN PAGE -->
-	<div class="box animated fadeIn" id="login_div" method="post">
+	<div class="box animated fadeIn  delay-3s" id="login_div" method="post">
 		<h1>Login</h1>
 		<input type="email" id="email_field" placeholder="E-mail">
 		<input type="password" id="password_field" placeholder="Password">
@@ -67,7 +78,34 @@
 
 		<!-- APP GOES HERE -->
 		<div class ="displaynone animated" id = "body_div">
-			<h1 class ="text-center">Moodsic</h1>
+			
+			<!-- Mood Selector -->
+			<div class="containerMood">
+					<div class="row">
+						<h1 id="moodTitle">HOW ARE YOU FEELING TODAY? </h1>
+		
+						<br>
+		
+						<div class="btn-toolbar">
+								<button type="button" class="btn btn-lg btn-primary">Happy</button>
+								<button type="button" class="btn btn-lg btn-secondary">Sad</button>
+								<button type="button" class="btn btn-lg btn-success">Jealous</button>
+								<button type="button" class="btn btn-lg btn-danger">Angry</button>
+								<button type="button" class="btn btn-lg btn-warning">Tired</button>
+								<button type="button" class="btn btn-lg btn-info">Love</button>
+								<button type="button" class="btn btn-lg btn-dark">Stress</button>
+						</div>
+			
+					</div>
+		
+				</div>
+
+
+
+
+
+
+
 
 
 		</div>
@@ -80,7 +118,10 @@
 			// You can now initialize Spotify.Player and use the SDK
 			};
 	</script>
+
+	<script src="js/splash.js"></script>
 	<script src="assets/javascript/logic.js"></script>
+	
   <!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
