@@ -24,15 +24,15 @@
   		<a class="navbar-brand" href="#">Moodsic</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
-  		</button>
-
+			</button>
+			
   	<div class="collapse navbar-collapse" id="navbarSupportedContent">
     	<ul class="navbar-nav mr-auto">
-      	<li class="nav-item active">
+				
+				<li class="nav-item active">
         	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       	</li>
 				
-
 				<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
 				</li>
@@ -49,12 +49,11 @@
 		<h1>Login</h1>
 		<input type="email" id="email_field" placeholder="E-mail">
 		<input type="password" id="password_field" placeholder="Password">
-
 		<button onclick="" id = "login" class="submit">Login </button>
 		<button onclick="" id = "signupButton" class="submit">Sign Up </button>
-		<a href="">Sign in as Guest</a>
+		<button id = "guest_button" class="">Login as Guest </button>
+		
 	</div>
-
 
 	<!-- SIGN UP PAGE -->
 	<div class = "box animated " id = "signup_div" method ="post">
@@ -66,23 +65,22 @@
 		<button onclick="" id = "signup" class="submit">Sign Up </button>
 	</div>
 
+		<!-- APP GOES HERE -->
+		<div class ="displaynone animated" id = "body_div">
+			<h1 class ="text-center">Moodsic</h1>
 
 
-	<script src="https://sdk.scdn.co/spotify-player.js"></script>
-	<script>
-		window.onSpotifyWebPlaybackSDKReady = () => {
+		</div>
+
+	
+		<script src="https://sdk.scdn.co/spotify-player.js"></script>
+	
+		<script>
+			window.onSpotifyWebPlaybackSDKReady = () => {
 			// You can now initialize Spotify.Player and use the SDK
-		};
+			};
 	</script>
 	<script src="assets/javascript/logic.js"></script>
-
-	<!-- APP GOES HERE -->
-	<div class ="displaynone animated" id = "body_div">
-		<h1 class ="text-center">Moodsic</h1>
-
-	</div>
-
-
   <!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
@@ -90,7 +88,5 @@
 	<script src="js/auth.js"></script>
 	<script src="js/index.js"></script>
 	
-
 </body>
-
 </html>
