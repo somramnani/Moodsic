@@ -1,24 +1,41 @@
-var db = require("../models");
+const db = require("../models");
+const passport = require("../config/passport");
 
-module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+module.exports = (app) => {
+  app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    res.json("/members");
+  });
+  //sign up route - creates a user in the DB via sequelize then redirects you to the login page.
+  app.post("/api/signup", (req, res) => {
+
+    console.log(req.body);
+    db.User.create({
+      email: req.body.email,
+      password: req.body.password
+    }).then(() => {
+      res.redirect(307, "/api/login");
+    }).catch((err) => {
+      console.log(err);
+      res.json(err);
+      // res.status(422).json(err.errors[0].message);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
+// Log out
+  app.get("/logout", (req, res) => { 
+    req.logout();
+    res.redirect("/");
   });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", (req, res) => {
+    if (!req.user) {
+      res.json({});
+    }
+    else {
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
   });
 };
