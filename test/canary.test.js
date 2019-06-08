@@ -19,7 +19,7 @@ chai.use(chaiHttp);
 
 var request;
 
-describe("GET /api/examples", function () {
+describe("GET /api/login", function () {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function () {
@@ -41,7 +41,7 @@ describe("GET /api/examples", function () {
       }
     ]).then(function () {
       // Request the route that returns all examples
-      request.get("/api/examples").end(function (err, res) {
+      request.get("/api/login").end(function (err, res) {
         var responseStatus = res.status;
         var responseBody = res.body;
 
