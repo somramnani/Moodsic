@@ -3,7 +3,7 @@ const passport = require("../config/passport");
 
 module.exports = (app) => {
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    res.json("/members");
+
   });
   //sign up route - creates a user in the DB via sequelize then redirects you to the login page.
   app.post("/api/signup", (req, res) => {
@@ -16,7 +16,7 @@ module.exports = (app) => {
         password: req.body.password,
       
     }).then(() => {
-     
+      
 
     }).catch((err) => {
       console.log(err);
