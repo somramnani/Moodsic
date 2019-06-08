@@ -1,5 +1,6 @@
 const db = require("../models");
 const passport = require("../config/passport");
+var my_client_id = '4562bd2994224fa4bf912981be4699d1';
 
 module.exports = (app) => {
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
@@ -25,8 +26,17 @@ module.exports = (app) => {
     });
   });
 
-// Log out
-  app.get("/logout", (req, res) => { 
+  // app.get('/members/:email', function(req, res) {
+  //   var scopes = 'user-read-private user-read-email';
+  //   res.redirect('https://accounts.spotify.com/authorize' +
+  //     '?response_type=code' +
+  //     '&client_id=' + my_client_id +
+  //     (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
+  //     '&redirect_uri=' + encodeURIComponent(redirect_uri));
+  // });
+  
+  // Log out
+  app.get("/logout", (req, res) => {
     req.logout();
     res.redirect("/");
   });
@@ -34,8 +44,7 @@ module.exports = (app) => {
   app.get("/api/user_data", (req, res) => {
     if (!req.user) {
       res.json({});
-    }
-    else {
+    } else {
       res.json({
         email: req.user.email,
         id: req.user.id
