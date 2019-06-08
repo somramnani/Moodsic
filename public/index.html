@@ -57,15 +57,21 @@
 	
 
 	<!-- LOGIN PAGE -->
-	<div class="box animated fadeIn  delay-3s" id="login_div" method="post">
+	<form action="/api/login" method = "post">
+	<div class="box animated fadeIn  delay-3s" id="login_div">
 		<h1>Login</h1>
-		<input type="email" id="email_field" placeholder="E-mail">
-		<input type="password" id="password_field" placeholder="Password">
-		<button onclick="" id = "login" class="submit">Login </button>
-		<button onclick="" id = "signupButton" class="submit">Sign Up </button>
+		<input type="email" name = "email" id="email_field" placeholder="E-mail">
+		<input type="password"  name = "password" id="password_field" placeholder="Password">
+		<button type = "submit" id = "login" class="submit">Login </button>
+		<button id = "signupButton" class="submit">Sign Up </button>
+
+
 		<button id = "guest_button" class="">Login as Guest </button>
-		
+	
 	</div>
+</form>
+
+
 
 	<!-- SIGN UP PAGE -->
 	<form action="/api/signup" method = "post">

@@ -40,9 +40,7 @@
     $("#login_div").removeClass("delay-3s");
  
     //Sign in
-    auth.signInWithEmailAndPassword(email, password).catch(function(error) {
-      console.log(error);
-    });
+   
   });
 
   // Continue as guest
@@ -56,6 +54,7 @@
 //SIGN UP PAGE
 //________________________________________________________
   signUpLink.on("click", function() {
+    event.preventDefault();
     $("#signup_div").addClass("fadeIn");
     $("#signup_div").show();
     $("#login_div").removeClass("delay-3s");
@@ -64,9 +63,10 @@
 
   // Add a sign up Event
   signUpBtn.on("click", function() {
-   
+
     $("#signup_div").removeClass("fadeIn");
     $("#signup_div").addClass("fadeOut");
+    alert("signed")
   });
 //________________________________________________________
 
