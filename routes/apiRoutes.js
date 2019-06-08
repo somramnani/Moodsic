@@ -9,10 +9,15 @@ module.exports = (app) => {
   app.post("/api/signup", (req, res) => {
    
     db.User.create({
-      newUser: req.body.newUser
+       
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        password: req.body.password,
+      
     }).then(() => {
-      res.json(newUser);
      
+
     }).catch((err) => {
       console.log(err);
       res.json(err);
