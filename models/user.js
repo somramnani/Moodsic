@@ -6,6 +6,16 @@ var bcrypt = require("bcryptjs");
 //Set it as export because we will need it required on the server
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
+    firstname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
+    },
+    lastname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: false,
+    },
     email: {
     type: DataTypes.STRING,
     allowNull: false,

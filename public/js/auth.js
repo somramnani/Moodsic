@@ -64,15 +64,7 @@
 
   // Add a sign up Event
   signUpBtn.on("click", function() {
-  
-    var email = $("#email").val();
-    var password = $("#password").val();
-
-    auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-      console.log(error);
-      console.log(email);
-    });
-
+   
     $("#signup_div").removeClass("fadeIn");
     $("#signup_div").addClass("fadeOut");
   });
