@@ -7,13 +7,12 @@ module.exports = (app) => {
   });
   //sign up route - creates a user in the DB via sequelize then redirects you to the login page.
   app.post("/api/signup", (req, res) => {
-
-    console.log(req.body);
+   
     db.User.create({
-      email: req.body.email,
-      password: req.body.password
+      newUser: req.body.newUser
     }).then(() => {
-      res.redirect(307, "/api/login");
+      res.json(newUser);
+     
     }).catch((err) => {
       console.log(err);
       res.json(err);
