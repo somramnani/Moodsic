@@ -64,14 +64,18 @@
 
   // Add a sign up Event
   signUpBtn.on("click", function() {
-  
-    var email = $("#email").val();
-    var password = $("#password").val();
+    var newUser = {
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      password: req.body.password,
+    }
 
-    auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-      console.log(error);
-      console.log(email);
-    });
+    console.log(newUser);
+    // auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+    //   console.log(error);
+    //   console.log(email);
+    // });
 
     $("#signup_div").removeClass("fadeIn");
     $("#signup_div").addClass("fadeOut");
