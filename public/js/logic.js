@@ -48,3 +48,6 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     // Connect to the player!
     player.connect();
 };
+
+// Do we have to define device_id and message? I'm not seeing it in spotify.js; not that it should be there, 
+// but I'm just wondering what's supposed to happen with these variables
