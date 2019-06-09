@@ -40,6 +40,10 @@
     $("#login_div").removeClass("delay-3s");
  
     //Sign in
+    $("#login_div").addClass("fadeOut");
+    $("#login_div").removeClass("fadeIn");
+    $("#body_div").removeClass("displaynone");
+    $("#body_div").addClass("fadeIn");
    
   });
 
@@ -73,9 +77,12 @@
 // Add a logout function
 logOutBtn.on("click", function() {
   $("#login_div").removeClass("fadeIn");
-  var auth = firebase.auth();
-  auth.signOut();
+
   $("#login_div").removeClass("delay-3s");
+
+  $("#login_div").removeClass("fadeOut");
+$("#login_div").addClass("fadeIn");
+$("#body_div").addClass("displaynone");
   
 
 });
@@ -93,12 +100,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     // ...
   } else {
-    // User is signed out.
-    console.log("Not signed in");
+    
    
-    $("#login_div").removeClass("fadeOut");
-    $("#login_div").addClass("fadeIn");
-    $("#body_div").addClass("displaynone");
+   
+   
     // ...
   }
 });
+//When User is signed out
+$("#login_div").removeClass("fadeOut");
+$("#login_div").addClass("fadeIn");
+$("#body_div").addClass("displaynone");
