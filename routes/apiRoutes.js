@@ -1,10 +1,10 @@
 const db = require("../models");
 const passport = require("../config/passport");
-var my_client_id = '4562bd2994224fa4bf912981be4699d1';
+var my_client_id = '4562bd2994224fa4bf912981be4699d1'; 
+// Is my_client_id going to be used here?
 
 module.exports = (app) => {
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-
   });
   //sign up route - creates a user in the DB via sequelize then redirects you to the login page.
   app.post("/api/signup", (req, res) => {
@@ -14,7 +14,6 @@ module.exports = (app) => {
       email: req.body.email,
       password: req.body.password,
     }).then(() => {
-
     }).catch((err) => {
       console.log(err);
       res.json(err);
@@ -24,7 +23,6 @@ module.exports = (app) => {
   // Log out
   app.get("/logout", (req, res) => {
     req.logout();
-
   });
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", (req, res) => {

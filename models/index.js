@@ -7,7 +7,6 @@ var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
-
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
@@ -19,7 +18,6 @@ if (config.use_env_variable) {
     config
   );
 }
-
 fs.readdirSync(__dirname)
   .filter(function (file) {
     return (
@@ -30,14 +28,11 @@ fs.readdirSync(__dirname)
     var model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
-
 Object.keys(db).forEach(function (modelName) {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
 });
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
 module.exports = db;
