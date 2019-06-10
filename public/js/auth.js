@@ -41,9 +41,12 @@ loginBtn.on("click", function () {
 
   //Sign in
   $("#login_div").addClass("fadeOut");
+  $("#login_div").addClass("displaynone");
   $("#login_div").removeClass("fadeIn");
   $("#body_div").removeClass("displaynone");
   $("#body_div").addClass("fadeIn");
+
+  alert("Welcome " + req.body.fristname);
 
 });
 
@@ -62,6 +65,7 @@ signUpLink.on("click", function () {
   $("#signup_div").addClass("fadeIn");
   $("#signup_div").show();
   $("#login_div").removeClass("delay-3s");
+  $("#signup_div").removeClass("displaynone");
 
 });
 
@@ -70,6 +74,7 @@ signUpBtn.on("click", function () {
 
   $("#signup_div").removeClass("fadeIn");
   $("#signup_div").addClass("fadeOut");
+  $("#signup_div").addClass("displaynone");
   alert("signed")
 });
 //________________________________________________________
@@ -77,34 +82,16 @@ signUpBtn.on("click", function () {
 // Add a logout function
 logOutBtn.on("click", function () {
   $("#login_div").removeClass("fadeIn");
-
   $("#login_div").removeClass("delay-3s");
-
   $("#login_div").removeClass("fadeOut");
+  $("#login_div").removeClass("displaynone");
   $("#login_div").addClass("fadeIn");
+  
   $("#body_div").addClass("displaynone");
+
 });
 
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    console.log(user);
-    console.log("Signed in");
 
-    $("#login_div").addClass("fadeOut");
-    $("#login_div").removeClass("fadeIn");
-    $("#body_div").removeClass("displaynone");
-    $("#body_div").addClass("fadeIn");
-
-
-    // ...
-  } else {
-
-
-
-
-    // ...
-  }
-});
 //When User is signed out
 $("#login_div").removeClass("fadeOut");
 $("#login_div").addClass("fadeIn");
