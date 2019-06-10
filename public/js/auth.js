@@ -26,6 +26,10 @@ var signUpLink = $("#signupButton");
 var signUpBtn = $("#signup");
 var logOutBtn = $("#logout");
 var auth = firebase.auth();
+//When User is signed out
+$("#login_div").removeClass("fadeOut");
+$("#login_div").addClass("fadeIn");
+$("#body_div").addClass("displaynone");
 $("#signup_div").hide();
 //________________________________________________________
 
@@ -35,19 +39,12 @@ $("#signup_div").hide();
 
 // Add login event
 loginBtn.on("click", function () {
-  var email = $("#email_field").val();
-  var password = $("#password_field").val();
-  $("#login_div").removeClass("delay-3s");
-
   //Sign in
-  $("#login_div").addClass("fadeOut");
-  $("#login_div").addClass("displaynone");
-  $("#login_div").removeClass("fadeIn");
+  $("#login_div").addClass("fadeOut displaynone");
+  $("#login_div").removeClass(" delay-3s fadeIn");
+
   $("#body_div").removeClass("displaynone");
   $("#body_div").addClass("fadeIn");
-
-  alert("Welcome " + req.body.fristname);
-
 });
 
 // Continue as guest
@@ -64,35 +61,24 @@ signUpLink.on("click", function () {
   event.preventDefault();
   $("#signup_div").addClass("fadeIn");
   $("#signup_div").show();
-  $("#login_div").removeClass("delay-3s");
-  $("#signup_div").removeClass("displaynone");
-
+  $("#login_div").removeClass("delay-3s fadeIn displaynone");
 });
 
 // Add a sign up Event
 signUpBtn.on("click", function () {
-
   $("#signup_div").removeClass("fadeIn");
-  $("#signup_div").addClass("fadeOut");
   $("#signup_div").addClass("displaynone");
-  alert("signed")
+
+  $("#login_div").addClass("fadeIn");
+  alert("signed up")
 });
 //________________________________________________________
 
 // Add a logout function
 logOutBtn.on("click", function () {
-  $("#login_div").removeClass("fadeIn");
-  $("#login_div").removeClass("delay-3s");
-  $("#login_div").removeClass("fadeOut");
-  $("#login_div").removeClass("displaynone");
+  $("#login_div").removeClass("fadeIn delay-3s fadeOut displaynone");
   $("#login_div").addClass("fadeIn");
-  
   $("#body_div").addClass("displaynone");
-
 });
 
 
-//When User is signed out
-$("#login_div").removeClass("fadeOut");
-$("#login_div").addClass("fadeIn");
-$("#body_div").addClass("displaynone");
