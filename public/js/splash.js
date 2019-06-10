@@ -1,5 +1,5 @@
 function fade(element) {
-    var op = 1;  // initial opacity
+    var op = 1; // initial opacity
     var timer = setInterval(function () {
         if (op <= 0.1) {
             clearInterval(timer);
@@ -16,8 +16,4 @@ function fade(element) {
 setTimeout(function () {
 
     fade(document.getElementById('splash'));
-}
-    , 2000);
-
-
-   
+}, 2000);
