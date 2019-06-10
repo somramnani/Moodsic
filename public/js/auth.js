@@ -83,8 +83,6 @@ logOutBtn.on("click", function () {
   $("#login_div").removeClass("fadeOut");
   $("#login_div").addClass("fadeIn");
   $("#body_div").addClass("displaynone");
-
-
 });
 
 firebase.auth().onAuthStateChanged(function (user) {
