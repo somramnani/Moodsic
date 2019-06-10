@@ -81,8 +81,8 @@ logOutBtn.on("click", function() {
   $("#login_div").removeClass("delay-3s");
 
   $("#login_div").removeClass("fadeOut");
-$("#login_div").addClass("fadeIn");
-$("#body_div").addClass("displaynone");
+  $("#login_div").addClass("fadeIn");
+  $("#body_div").addClass("displaynone");
   
 
 });

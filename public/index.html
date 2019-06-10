@@ -50,7 +50,7 @@
 				</li>
 
 				<li class="nav-item">
-						<form action="/api/logout" method = "post">
+						<form action="/api/logout" method = "get">
 					<button id = "logout" >Logout </button>
 					</form>
 				</li>
@@ -87,57 +87,41 @@
 		</div>
 	</form>
 
-		<!-- APP GOES HERE -->
-		<div class ="displaynone animated" id = "body_div">
-			
-			<!-- Mood Selector -->
-			<div class="containerMood">
-					<div class="row">
-						<h1 id="moodTitle">HOW ARE YOU FEELING TODAY? </h1>
 		
-						<br>
-				
-
-						<div class="btn-toolbar">
-								<button type="button" id="happyButton" class="btn btn-lg btn-primary">Happy</button>
-								<button type="button" class="btn btn-lg btn-secondary">Sad</button>
-								<button type="button" class="btn btn-lg btn-success">Jealous</button>
-								<button type="button" class="btn btn-lg btn-danger">Angry</button>
-								<button type="button" class="btn btn-lg btn-warning">Tired</button>
-								<button type="button" class="btn btn-lg btn-info">Love</button>
-								<button type="button" class="btn btn-lg btn-dark">Stress</button>
-								<input type="search" value="">
-    							<input type="submit" value="Create">
-						</div>
-						
-						<!--Tony's input form for spotify api testing-->
-						<!-- <form action="">
-								<input type="search" value="">
-								<input type="submit" value="Create">
-								
-							</form> -->
-			
-					</div>
-		
-				</div>
-
-
-
-
-
-
-
-
-
+	<!-- APP GOES HERE -->
+	<div class ="displaynone animated" id = "body_div">		
+		<!-- Mood Selector -->
+		<div class="containerMood">
+			<div class="row">
+				<h1 id="moodTitle">HOW ARE YOU FEELING TODAY? </h1>
+				<br>
+				<div class="btn-toolbar">
+					<button type="button" id="happyButton" class="btn btn-lg btn-primary">Happy</button>
+					<button type="button" class="btn btn-lg btn-secondary">Sad</button>
+					<button type="button" class="btn btn-lg btn-success">Jealous</button>
+					<button type="button" class="btn btn-lg btn-danger">Angry</button>
+					<button type="button" class="btn btn-lg btn-warning">Tired</button>
+					<button type="button" class="btn btn-lg btn-info">Love</button>
+					<button type="button" class="btn btn-lg btn-dark">Stress</button>
+					<input type="search" value="">
+					<input type="submit" value="Create">	
+				</div>		
+				<!--Tony's input form for spotify api testing-->
+				<!-- <form action="">
+						<input type="search" value="">
+						<input type="submit" value="Create">
+					</form> -->
+			</div>
 		</div>
+	</div>
+		
+	<script src="https://sdk.scdn.co/spotify-player.js"></script>
+	<script>
 
-	
-		<script src="https://sdk.scdn.co/spotify-player.js"></script>
-	
-		<script>
-			window.onSpotifyWebPlaybackSDKReady = () => {
-			// You can now initialize Spotify.Player and use the SDK
-			};
+		window.onSpotifyWebPlaybackSDKReady = () => {
+			// You can now initialize Spotify.Player and use the SDK		
+		};
+
 	</script>
 
 	<script src="js/splash.js"></script>

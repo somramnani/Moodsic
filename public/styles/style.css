@@ -19,7 +19,7 @@ a{
 	font: inherit;
 	cursor: pointer;
   outline: inherit;
-  transform: translateY(.5em);
+  transform: translate(-3em,-.1em);
 }
 #guest_button{
   border: none;
@@ -36,7 +36,6 @@ a{
 #guest_button:hover{
   color:white;
 }
-
 
 .box {
   width: 500px;
