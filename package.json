@@ -14,10 +14,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
-  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/somramnani/Project2.git"
