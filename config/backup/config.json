@@ -1,0 +1,24 @@
+{
+"development": {
+  "username": "root",
+  "password": "Dragonfly_23",
+  "database": "exampledb",
+  "dialect": "mysql",
+  "host": "localhost"
+  },
+  "test": {
+    "username": "root",
+    "password": "Dragonfly_23",
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}
+
+
+
