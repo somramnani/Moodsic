@@ -32,13 +32,15 @@
 	<!-- Splash Screen-->
 	<div id="splash" class="flex-container">
 		<div class="flex-item">
-			<h2 id="splashHeader" class="animated lightSpeedIn">MOODSIC.<h2>
+			<h2 id="splashHeader" class="animated lightSpeedIn">MOODSIC<h2>
 		</div>
 	</div>
 	<!-- Splash End -->
 
 	<nav class=" animated fadeIn  delay-3s navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" onClick="window.location.reload();" href="#" >Moodsic.</a>
+
+		<a class="navbar-brand" onClick="window.location.reload();" href="#" >Moodsic</a>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -55,8 +57,13 @@
 					<a class="nav-link" href="#">Link</a>
 				</li> -->
 
+		
 				<li class="nav-item">
 
+					<i class="large material-icons" id = "account-icon" >account_circle</i>
+				</li>
+			
+				<li class="nav-item">
 					<form action="/api/logout" method = "get">
 						<button id = "logout" >Logout </button>
 					</form>
