@@ -1,5 +1,3 @@
-require("./spotify");
-
 window.onSpotifyWebPlaybackSDKReady = () => {
     const token = "BQCUmT0Sd-FEFzSlvXqsVD_b5_AaBzP7b63xesbUGSQZmeH-h36T-a5SEVRZwNBp3zy7Rxi3_HNSLM_IRmhB3vSQwu2cvWCgGjgtAck6c-vLmOfYr2GOtbkPONqntIafR9k152bLkwwyuNtzvLGd2g";
     const player = new Spotify.Player({
