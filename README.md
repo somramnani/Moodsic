@@ -1,4 +1,4 @@
-# Moodsic
+# Moodsic 
 
 ## Overview
 Creates a playlist in spotify depending on your mood. 
