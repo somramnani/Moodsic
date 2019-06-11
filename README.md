@@ -1,7 +1,7 @@
 # Moodsic 
 
 ## Overview
-Creates a playlist in spotify depending on your mood. 
+A web application that creates a playlist in spotify depending on your mood. 
 
 ## Languages/Tools Used
 - HTML5
