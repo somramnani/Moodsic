@@ -37,7 +37,8 @@ html, body, .viewport {
 
 #splashHeader {
     color: white;
-    font-family: 'Sigmar One', cursive;
-    font-size: 100px;
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 200px;
+    animation-duration: 2.5s;
     
 }
