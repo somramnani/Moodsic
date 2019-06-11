@@ -11,6 +11,12 @@ module.exports = function (app) {
     //   });
     // });
   });
+
+  app.get("/logout", (req, res) => {
+    req.logout();
+    console.log('logged out');
+  });
+  
   // Load example page and pass in an example by id
   app.get("/example/:id", function (req, res) {
     db.Example.findOne({
