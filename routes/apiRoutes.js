@@ -4,7 +4,7 @@ var my_client_id = '4562bd2994224fa4bf912981be4699d1';
 
 module.exports = (app) => {
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-   console.log("Signed in as " + req.body.email)
+   console.log("Signed in as " + req.user.email)
 
   });
 
