@@ -5,14 +5,14 @@
   },
   "test": {
     "username": "root",
-    "password": "Dragonfly_23",
+    "password": null,
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
-    "use_env_variable": "mysql://umlcri607fqsyavx:nbt1zofbgcgw63bd@mna97msstjnkkp7h.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/egzk867fr582jjdj",
+    "use_env_variable": "mysql://j30anlkyx7t36xd0:hxdfttmr0px20lt1@l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/opykqmjrh4ur1bdd",
     "dialect": "mysql"
   }
 }
