@@ -11,8 +11,13 @@
 
 	<!-- **************Bootstrap Links************** -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- Materialize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Chau+Philomene+One&display=swap" rel="stylesheet">
 	<!-- My Style Sheets -->
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/mobile.css">
@@ -27,13 +32,13 @@
 	<!-- Splash Screen-->
 	<div id="splash" class="flex-container">
 		<div class="flex-item">
-			<h2 id="splashHeader">Moodsic<h2>
+			<h2 id="splashHeader" class="animated lightSpeedIn">MOODSIC.<h2>
 		</div>
 	</div>
 	<!-- Splash End -->
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Moodsic</a>
+	<nav class=" animated fadeIn  delay-3s navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" onClick="window.location.reload();" href="#" >Moodsic.</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -42,19 +47,25 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 
-				<li class="nav-item active">
+				<!-- <li class="nav-item active">
 					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 
 				<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
-				</li>
+				</li> -->
 
 				<li class="nav-item">
 
 					<form action="/api/logout" method = "get">
 						<button id = "logout" >Logout </button>
 					</form>
+
+				</li>
+				<li class="nav-item">
+
+					<i class="large material-icons">account_circle</i>
+
 
 				</li>
 			</ul>
@@ -133,6 +144,7 @@
 
 	<!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
 	<script src="js/auth.js"></script>
