@@ -9,16 +9,16 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    //User is logged in
-    $("#user_div").addClass("displaynone");
-    $("#login_div").removeClass("displaynone");
-  } else {
-    // User is not logged in
-    $("#login_div").addClass("displaynone");
-  }
-});
+// firebase.auth().onAuthStateChanged(function (user) {
+//   if (user) {
+//     //User is logged in
+//     $("#user_div").addClass("displaynone");
+//     $("#login_div").removeClass("displaynone");
+//   } else {
+//     // User is not logged in
+//     $("#login_div").addClass("displaynone");
+//   }
+// });
 
 
 var $exampleText = $("#example-text");
