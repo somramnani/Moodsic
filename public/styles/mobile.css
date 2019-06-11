@@ -1,0 +1,66 @@
+/* General Mobile Styles
+========================================================================== */
+@media only screen and (max-width : 768px) {
+}
+  
+
+
+
+/* ========================================================================== */  
+
+
+
+/* Specific Phone Mobile Styles
+========================================================================== */
+/* iPhone 5/SE */
+
+
+/* Galaxy S5 */
+@media (min-width:360px) and (max-width:360px) {
+  
+ body{
+  background-color: #34495e;
+  width: 100%;
+ }
+  .navbar{
+    width: 100%;
+  }
+
+  .box{
+    transform: translate(2em,5em);
+  }
+
+
+  
+
+
+ 
+
+}
+
+/* iPhone 6/7/8 */
+@media only screen and (min-width : 375px) and (max-width : 667px) { 
+
+  
+
+}
+
+/* iPhone 6,7, & Plus */
+@media only screen  and (min-width : 414px) and (max-width : 736px) {
+
+  
+}
+
+
+
+/* iPad */
+@media only screen and (min-width : 768px) and (max-width : 1024px)   {
+  
+  
+}
+
+
+
+
+/* ========================================================================== */  
+
