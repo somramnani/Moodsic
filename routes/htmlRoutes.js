@@ -18,6 +18,7 @@ module.exports = function (app) {
   // My Account Page
   app.get("/account", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/account.html"));
+  });
 
   app.get("/logout", (req, res) => {
     req.logout();
