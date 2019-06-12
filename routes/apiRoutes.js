@@ -4,7 +4,7 @@ var my_client_id = '4562bd2994224fa4bf912981be4699d1';
 
 module.exports = (app) => {
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-   console.log("Signed in as " + req.body.email)
+    console.log("Signed in as " + req.body.email)
   });
 
   //Sign up route - creates a user in the DB via sequelize then redirects you to the login page.
@@ -15,7 +15,7 @@ module.exports = (app) => {
       email: req.body.email,
       password: req.body.password,
     }).then(() => {
-console.log('new user ' + req.body.email + ' is signed up');
+      console.log('new user ' + req.body.email + ' is signed up');
     }).catch((err) => {
       console.log(err);
       res.json(err);
@@ -26,7 +26,7 @@ console.log('new user ' + req.body.email + ' is signed up');
   app.get("/api/logout", (req, res) => {
     req.logout();
     console.log("Logged Out")
-    
+
 
   });
   // Route for getting some data about our user to be used client side
