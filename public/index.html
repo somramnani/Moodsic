@@ -40,7 +40,7 @@
 	<!-- NavBar -->
 	<nav class=" animated fadeIn  delay-3s navbar navbar-expand-lg navbar-dark bg-dark">
 
-		<a class="navbar-brand" onClick="window.location.reload();" href="#" >Moodsic</a>
+		<a class="navbar-brand" onClick="window.location.reload();" href="#">Moodsic</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,14 +50,16 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 
+
 		
 				<li class="nav-item">
 					<a href="/account"><i class="large material-icons" id = "account-icon">account_circle</i></a>
+
 				</li>
-			
+
 				<li class="nav-item">
-					<form action="/api/logout" method = "get">
-						<button id = "logout" >Logout </button>
+					<form action="/api/logout" method="get">
+						<button id="logout">Logout </button>
 					</form>
 
 				</li>
@@ -76,7 +78,6 @@
 			<button id="guest_button" class="">Login as Guest </button>
 		</div>
 	</form>
-
 	<!-- SIGN UP PAGE -->
 	<form action="/api/signup" method="post">
 		<div class="box animated" id="signup_div">
@@ -88,19 +89,14 @@
 			<button type="submit" id="signup" class="submit">Sign Up </button>
 		</div>
 	</form>
-
-
 	<!-- APP GOES HERE -->
-	<div class ="displaynone animated" id = "body_div">		
-
+	<div class="displaynone animated" id="body_div">
 		<!-- Mood Selector -->
 		<div class="containerMood">
 			<div class="row">
 				<h1 id="moodTitle">HOW ARE YOU FEELING TODAY? </h1>
-        
 				<br>
 				<br>
-
 				<div class="btn-toolbar">
 					<button type="button" id="happyButton" class="btn btn-lg btn-primary">Happy</button>
 					<button type="button" class="btn btn-lg btn-secondary">Sad</button>
@@ -110,43 +106,32 @@
 					<button type="button" class="btn btn-lg btn-info">Love</button>
 					<button type="button" class="btn btn-lg btn-dark">Stress</button>
 					<input type="search" value="">
-
-					<input type="submit" value="Create">	
-				</div>		
-        
-				<!--Tony's input form for spotify api testing-->
-				<!-- <form action="">
-						<input type="search" value="">
-						<input type="submit" value="Create">
-					</form> -->
-        
+					<input type="submit" value="Create">
+				</div>
 			</div>
 		</div>
 	</div>
-		
 	<script src="https://sdk.scdn.co/spotify-player.js"></script>
 	<script>
-    
 		window.onSpotifyWebPlaybackSDKReady = () => {
 			// You can now initialize Spotify.Player and use the SDK		
 		};
-
 	</script>
 
 	<div id="spotifyPlayer" id="Spotify.Player"></div>
-
-	<script src="js/splash.js"></script>
-	<script src="assets/javascript/logic.js"></script>
 
 	<!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
 	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-	<script src="js/logic.js"></script>
-	<script src="js/auth.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/spotify.js"></script>
+	<script src="/js/logic.js"></script>
+	<script src="/js/auth.js"></script>
+	<script src="/js/spotify.js"></script>
+	<script src="/js/splash.js"></script>
+
 
 </body>
+
 </html>

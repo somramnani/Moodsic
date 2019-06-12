@@ -27,6 +27,10 @@ module.exports = function (sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    playlists: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   }, {
     freezeTableName: true,
