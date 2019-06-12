@@ -26,9 +26,8 @@ console.log('new user ' + req.body.email + ' is signed up');
   app.get("/api/logout", (req, res) => {
     req.logout();
     console.log("Logged Out")
-    
-
   });
+
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", (req, res) => {
     if (!req.user) {
