@@ -59,5 +59,3 @@ logOutBtn.on("click", function () {
   $("#login_div").addClass("fadeIn");
   $("#body_div").addClass("displaynone");
 });
-
-
