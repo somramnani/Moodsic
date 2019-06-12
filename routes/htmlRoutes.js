@@ -1,5 +1,6 @@
 var db = require("../models");
 var passport = require('passport');
+var path = require("path");
 
 module.exports = function (app) {
 
@@ -22,16 +23,20 @@ module.exports = function (app) {
      console.log(req.user._json.href)
   })
 
-  app.get('https://api.spotify.com/v1/users/tonyguy66/playlists', function(req, res) {
+  // My Account Page
+  app.get("/account", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/account.html"));
+  });
 
-  })
-
+  // Log out route
   app.get("/logout", (req, res) => {
     req.logout();
     console.log('logged out');
     res.redirect('/');
   });
   
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");

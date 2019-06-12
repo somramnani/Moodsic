@@ -1,7 +1,7 @@
 //we import passport packages required for authentication
 const passport = require("passport");
 const SpotifyStrategy = require("passport-spotify").Strategy;
-//
+
 //We will need the models folder to check passport agains
 const db = require("../models");
 //

@@ -11,49 +11,24 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="styles/account.css">
-
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
     <!-- Nav -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-            <a class="navbar-brand" href="/" >Moodsic</a>
-    
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-    
-            
-                    <li class="nav-item">
-                        <a href="/account"><i class="large material-icons" id = "account-icon">account_circle</i></a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <form action="/api/logout" method = "get">
-                            <button id = "logout" >Logout </button>
-                        </form>
-    
-                    </li>
-                </ul>
-        </nav>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Moodsic</a>
+        <i class="large material-icons" href="account.html"
+            style="font-size: 3rem; margin-left: 88%; color:white;">account_circle</i>
+        <a class="nav-item nav-brand" id="logout" href="/logout" style="color: white">Logout</a>
+    </nav>
     <!-- End Nav -->
     <!-- Start Container -->
     <div class="container">
         <!-- Jumbotron -->
-
-        <div class="jumbotron jumbotron-fluid">
-            <h1 id="accountTitle" class="text-center">My Account</h1>
-            <i class="large material-icons">account_box</i>
-
+        <div class="jumbotron-fluid" style="background-color: lightblue; color: white;">
+            <h1 id="accountTitle" class="text-center" style="font-size: 100px">My Account</h1>
+            <i class="large material-icons" style="font-size: 18rem; margin-left: 42%; ">account_box</i>
         </div>
         <!-- Row -->
         <div class="row">
@@ -61,7 +36,7 @@
                 <!-- Playlist  -->
                 <div class="card">
                     <div class="card-header text-center">
-                       <h3> Mood Playlist</h3>
+                        Mood Playlist
                     </div>
                     <div class="card-body">
                         <table class="table table-hover" id='playlist-table'>

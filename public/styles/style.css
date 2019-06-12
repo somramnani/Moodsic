@@ -8,10 +8,20 @@ body {
 a{
   text-decoration: none;
 }
+a:hover{
+  text-decoration: none;
+}
 
 
 #account-icon{
-  transform: translateY(0.5em)
+  transform: translateY(0.5em);
+  text-align: right;
+  cursor: pointer;
+  size: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin: 0px 0px 29px;
+  margin-left: 3741%;
 }
 
 #logout{
@@ -23,13 +33,20 @@ a{
 	font: inherit;
 	cursor: pointer;
   outline: inherit;
-  transform: translate(110em, 0em);
+  transform: translate(0em, 0em);
+  font-size: 20px;
+  margin: 10px 10px 5px 5px;
+  width: 64px;
+  
 }
 
 #logout:hover{
   color: white
 }
 
+a.navbar-brand{
+  font-size: 20px;
+}
 
 #guest_button{
   border: none;
@@ -41,6 +58,14 @@ a{
 	font: inherit;
 	cursor: pointer;
   outline: inherit;
+}
+
+form {
+
+  width:100px;
+  height:64px;
+  margin-left: 1102%;
+
 }
 
 #guest_button:hover{
