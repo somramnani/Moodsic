@@ -1,0 +1,60 @@
+
+
+body {
+  font-family: sans-serif;
+  background: #34495e;
+}
+
+#account-icon{
+    transform: translateY(0.2em);
+    text-align: right;
+    cursor: pointer;
+    size: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin: 0px 0px 0px;
+    margin-left: 3533%;
+    color: white;
+  }
+  
+  #logout{
+    border: none;
+    background: none;
+    color: grey;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    transform: translateY(-.3em);
+    font-size: 20px;
+    margin: 10px 10px 5px 5px;
+    
+  }
+  
+  #logout:hover{
+    color: white
+  }
+
+  form {
+    width:100px;
+    margin-left: 1132%;
+  }
+  div.jumbotron.jumbotron-fluid {
+    margin: 0px 0px 32px;
+    padding: 32px;
+  }
+
+  .jumbotron{
+    background-color: lightsteelblue; 
+    color: white;
+    height: 481px;
+    padding: 4rem 2rem;
+  }
+
+  #accountTitle{
+    font-size: 100px;
+  }
+  .material-icons{
+    font-size: 18rem; 
+    margin-left: 40%; 
+  }

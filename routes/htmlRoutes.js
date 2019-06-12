@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function (app) {
   // Load index page
@@ -12,9 +13,16 @@ module.exports = function (app) {
     // });
   });
 
+
+
+  // My Account Page
+  app.get("/account", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/account.html"));
+
   app.get("/logout", (req, res) => {
     req.logout();
     console.log('logged out');
+
   });
 
   // Load example page and pass in an example by id
