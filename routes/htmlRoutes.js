@@ -1,7 +1,7 @@
-var db = require("../models");
+// var db = require("../models");
 var passport = require('passport');
 var path = require("path");
-
+var app = require("../server");
 module.exports = function (app) {
 
   function ensureAuthenticated(req, res, next) {
@@ -35,10 +35,9 @@ module.exports = function (app) {
     res.redirect('/');
   });
   
-  });
+  };
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
   });
-};
