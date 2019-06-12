@@ -1,12 +1,13 @@
 //we import passport packages required for authentication
-require(".env");
 const passport = require("passport");
+const LocalStrategy = require('passport-local');
 const SpotifyStrategy = require('passport-spotify').Strategy;
+
 passport.use(
   new SpotifyStrategy({
-      clientID: client_id,
-      clientSecret: client_secret,
-      callbackURL: 'http://localhost:8888/auth/spotify/callback'
+      clientID: process.env.client_id,
+      clientSecret: process.env.client_secret,
+      callbackURL: `${process.env.url}/auth/spotify/callback`
     },
     function (accessToken, refreshToken, expires_in, profile, done) {
       User.findOrCreate({
@@ -17,6 +18,7 @@ passport.use(
     }
   )
 );
+
 
 //We will need the models folder to check passport agains
 const db = require("../models");
