@@ -1,35 +1,88 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>If you hit this page your test worked</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-              placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description"
-              placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Moodsic</a>
+        <i class="large material-icons" href="account.html"
+            style="font-size: 3rem; margin-left: 88%; color:white;">account_circle</i>
+        <a class="nav-item nav-brand" id="logout" href="/logout" style="color: white">Logout</a>
+    </nav>
+    <!-- End Nav -->
+    <!-- Start Container -->
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron-fluid" style="background-color: lightblue; color: white;">
+            <h1 id="accountTitle" class="text-center" style="font-size: 100px">My Account</h1>
+            <i class="large material-icons" style="font-size: 18rem; margin-left: 42%; ">account_box</i>
+        </div>
+        <!-- Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Playlist  -->
+                <div class="card">
+                    <div class="card-header text-center">
+                       {{profile}}'s Mood Playlist
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover" id='playlist-table'>
+                            <thead>
+                                <tr>
+                                    <th>{{Artist}}</th>
+                                    <th>{{Song}}</th>
+                                    <th>{{Album}}</th>
+                                    <th>{{Year}}</th>
+                                    <th>{{Mood}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <script>
+                          var OAUTH = "BQChnGIvz4V0Cxzrex0g_PGtcnZNQuXZDkjc4DCmz0Sm1_j3oHlmsBnk0Dy3AocDtfLnrOWCKbF3KwD6iMDq_kV-arVVeViG3KIiblr-t_fgBht4xI4y5ZKHsmJt3y6e5q764sPTWcFgm-OZZJwb_ggUjbwvCa6nKI-RClPXAJzUJZ1eKWZY9auib2H1Zyfc2qDs5nklE5gnp0mlpYc3A90hlKRGGA"
+                          function getPlaylist() {
+                          $.ajax('https://api.spotify.com/v1/users/tonyguy66/playlists', {
+                          headers: {
+                          "Authorization": "Bearer " + OAUTH,
+                          "content-type": "application/json"
+                          },
+                          method: "GET"
+                          }).then(function(results) {
+                          console.log(results)
+                          })
+                          }
+                        </script>
+                      <button onclick="getPlaylist()">Click to get playlist object</button>
+                    </div>
+                </div>
+                <!-- End Playlist -->
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End Container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

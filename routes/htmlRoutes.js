@@ -1,43 +1,42 @@
 var db = require("../models");
+var passport = require('passport');
 var path = require("path");
 
 module.exports = function (app) {
-  // Load index page
-  app.get("/", function (req, res) {
-    // res.sendFile(__dirname, "index")
-    // db.Example.findAll({}).then(function (dbExamples) {
-    //   res.render("index", {
-    //     msg: "Welcome!",
-    //     examples: dbExamples
-    //   });
-    // });
-  });
 
+  function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return next();
+    }
+    res.redirect('/login');
+  }
 
+  app.get("/", function(req, res) {
+    res.render('index');
+  })
+
+  app.get("/accounts", ensureAuthenticated, function(req, res) {
+    res.render('testpage', {
+      msg: "hi there",
+      profile: req.user.username,
+     });
+     console.log(req.user._json.href)
+  })
 
   // My Account Page
   app.get("/account", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/account.html"));
   });
 
+  // Log out route
   app.get("/logout", (req, res) => {
     req.logout();
     console.log('logged out');
-
+    res.redirect('/');
+  });
+  
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(function (dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");
