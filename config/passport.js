@@ -7,8 +7,7 @@ const db = require("../models");
 //
 // Telling passport we want to use a Local Strategy. In other words,
 //we want login with a username/email and password
-passport.use(new SpotifyStrategy(
-  {
+passport.use(new SpotifyStrategy({
     clientID: '4562bd2994224fa4bf912981be4699d1',
     clientSecret: 'ff3b03831bf84774afbb85bd8cc72dea',
     callbackURL: 'http://localhost:3000/auth/spotify/callback'
