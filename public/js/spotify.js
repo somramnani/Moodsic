@@ -1,13 +1,13 @@
 // // //Client ID 4562bd2994224fa4bf912981be4699d1
 // // //Client Secret ff3b03831bf84774afbb85bd8cc72dea
 
-const app = {};
+const application = {};
 
 // var id = "4562bd2994224fa4bf912981be4699d1"
 const app = require("server.js");
 // attempt to GET playlist info from API
 $("#happyButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -25,7 +25,7 @@ $("#happyButton").on("click", function () {
 
 
 $("#sadButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -42,7 +42,7 @@ $("#sadButton").on("click", function () {
 });
 
 $("#angryButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -59,7 +59,7 @@ $("#angryButton").on("click", function () {
 });
 
 $("#jealousButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -76,7 +76,7 @@ $("#jealousButton").on("click", function () {
 });
 
 $("#stressedButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -93,7 +93,7 @@ $("#stressedButton").on("click", function () {
 });
 
 $("#loveButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -110,7 +110,7 @@ $("#loveButton").on("click", function () {
 });
 
 $("#tiredButton").on("click", function () {
-    app.getPlaylist = (playlist_id) => $.ajax({
+    application.getPlaylist = (playlist_id) => $.ajax({
         //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
         url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
         method: 'GET',
@@ -127,13 +127,13 @@ $("#tiredButton").on("click", function () {
 });
 
 //a diff attempt to GET playlist from API
-handlePlaylistSubmit(event)
+function handlePlaylistSubmit(event){
 event.preventDefault();
 let jsonData = {
     name: event.target.playlistName.value,
     public: false,
     description: event.target.playlistDescription.value
-}
+}};
 
 axios({
     method: 'post',
@@ -156,7 +156,7 @@ axios({
 
 
 
-// app.getAlbums = (albums) => $.ajax({
+// application.getAlbums = (albums) => $.ajax({
 //     url: 'https://api.spotify.com/v1/search',
 //     method: 'GET',
 //     dataType: 'json',
@@ -165,12 +165,12 @@ axios({
 //         q: albums
 //     }
 // });
-// app.getAlbumTracks = (id) => $.ajax({
+// application.getAlbumTracks = (id) => $.ajax({
 //     url: `https://api.spotify.com/v1/albums/${id}/tracks`,
 //     method: 'GET',
 //     dataType: 'json'
 // });
-// app.getArtists = (artist) => $.ajax({
+// application.getArtists = (artist) => $.ajax({
 //     url: 'https://api.spotify.com/v1/search',
 //     method: 'GET',
 //     dataType: 'json',
@@ -179,7 +179,7 @@ axios({
 //         q: artist
 //     }
 // });
-// app.getAristsAlbums = (id) => $.ajax({
+// application.getAristsAlbums = (id) => $.ajax({
 //     url: `https://api.spotify.com/v1/artists/${id}/albums`,
 //     method: 'GET',
 //     dataType: 'json',
@@ -187,55 +187,55 @@ axios({
 //         album_type: 'album',
 //     }
 // });
-// app.getPlaylist = (id) => $.ajax({
+// application.getPlaylist = (id) => $.ajax({
 //     url: 'https://api.spotify.com/vi/playlists/${id}/tracks',
 //     method: 'GET',
 //     dataType: 'json'
 // });
-// app.getAlbums = function (artists) {
-//     let albums = artists.map(artist => app.getAristsAlbums(artist.id));
+// application.getAlbums = function (artists) {
+//     let albums = artists.map(artist => application.getAristsAlbums(artist.id));
 //     $.when(...albums)
 //         .then((...albums) => {
 //             let albumIds = albums
 //                 .map(a => a[0].items)
 //                 .reduce((prev, curr) => [...prev, ...curr], [])
-//                 .map(album => app.getAlbumTracks(album.id));
-//             app.getTracks(albumIds);
+//                 .map(album => application.getAlbumTracks(album.id));
+//             application.getTracks(albumIds);
 //         });
 // };
-// app.getTracks = function (tracks) {
+// application.getTracks = function (tracks) {
 //     $.when(...tracks)
 //         .then((...tracks) => {
 //             tracks = tracks
 //                 .map(getDataObject)
 //                 .reduce((prev, curr) => [...prev, ...curr], []);
 //             const randomPlayList = getRandomTracks(50, tracks);
-//             app.createPlayList(randomPlayList);
+//             application.createPlayList(randomPlayList);
 //         })
 // };
-// app.createPlayList = function (songs) {
+// application.createPlayList = function (songs) {
 //     const baseUrl = 'https://embed.spotify.com/?theme=white&uri=spotify:trackset:My Playlist:';
 //     songs = songs.map(song => song.id).join(',');
 //     $('.loader').removeClass('show');
 //     $('.playlist').append(`<iframe src="${baseUrl + songs}" height="400"></iframe>`);
 // }
-// app.init = function () {
+// application.init = function () {
 //     $('form').on('submit', function (e) {
 //         e.preventDefault();
 //         let albums = $('input[type=search]').val();
 //         $('.loader').addClass('show');
 //         albums = albums
 //             .split(',')
-//             .map(app.getArists);
+//             .map(application.getArists);
 //         $.when(...albums)
 //             .then((...albums) => {
 //                 albums = albums.map(a => a[0].albums.items[0]);
 //                 console.log(albums);
-//                 app.getAlbums(albums);
+//                 application.getAlbums(albums);
 //             });
 //     });
 // }
-// $(app.init);
+// $(application.init);
 // const getDataObject = arr => arr[0].items;
 
 // function getRandomTracks(num, tracks) {
