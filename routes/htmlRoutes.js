@@ -11,12 +11,12 @@ module.exports = function (app) {
     res.redirect('/login');
   }
 
-  app.get("/", function(req, res) {
+  app.get("/", function(req, res) { 
     res.render('index');
   })
 
-  app.get("/accounts", ensureAuthenticated, function(req, res) {
-    res.render('testpage', {
+  app.get("/app", ensureAuthenticated, function(req, res) {
+    res.render('app', {
       msg: "hi there",
       profile: req.user.username,
      });
@@ -26,6 +26,11 @@ module.exports = function (app) {
   // My Account Page
   app.get("/account", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/account.html"));
+  });
+
+   // My Account Page
+   app.get("/app", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/app.html"));
   });
 
     // Render 404 page for any unmatched routes

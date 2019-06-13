@@ -27,7 +27,7 @@ module.exports = (app) => {
     '/auth/spotify/callback/',
     passport.authenticate('spotify', { failureRedirect: '/api/login' }),
     function(req, res) {
-      res.redirect('/accounts');
+      res.redirect('/app');
     }
   );
 
