@@ -10,7 +10,7 @@ const db = require("../models");
 passport.use(new SpotifyStrategy({
     clientID: '4562bd2994224fa4bf912981be4699d1',
     clientSecret: 'ff3b03831bf84774afbb85bd8cc72dea',
-    callbackURL: 'https://moodsic-bc.herokuapp.com/auth/spotify/callback'
+    callbackURL: 'http://localhost:3000/auth/spotify/callback'
   },
   (accessToken, refreshToken, expires_in, profile, done) => {
     process.nextTick(() => {
