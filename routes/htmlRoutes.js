@@ -28,6 +28,12 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/account.html"));
   });
 
+    // Render 404 page for any unmatched routes
+    app.get("*", function (req, res) {
+      res.render("404");
+    });
+  
+
   // Log out route
   app.get("/logout", (req, res) => {
     req.logout();
@@ -35,8 +41,10 @@ module.exports = function (app) {
     res.redirect('/');
   });
 
-    // Render 404 page for any unmatched routes
-    app.get("*", function (req, res) {
-      res.render("404");
-    });
-  };
+ // Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
+    res.render("404");
+  });
+};
+
+
