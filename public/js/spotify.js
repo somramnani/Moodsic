@@ -1,53 +1,159 @@
 // // //Client ID 4562bd2994224fa4bf912981be4699d1
 // // //Client Secret ff3b03831bf84774afbb85bd8cc72dea
 
-// const app = {};
+const app = {};
 
 // var id = "4562bd2994224fa4bf912981be4699d1"
-
+const app = require("server.js");
 // attempt to GET playlist info from API
-app.getPlaylist = (playlist_id) => $.ajax({
-    url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
-    method: 'GET',
-    dataType: 'json',
-    data: {
-        type: playlist_id,
-        q: playlist_id,
+$("#happyButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
         data: {
-            type: artist,
-            q: name
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
         }
-    }
+    });
+});
+
+
+$("#sadButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
+        }
+    });
+});
+
+$("#angryButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
+        }
+    });
+});
+
+$("#jealousButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
+        }
+    });
+});
+
+$("#stressedButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
+        }
+    });
+});
+
+$("#loveButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
+        }
+    });
+});
+
+$("#tiredButton").on("click", function () {
+    app.getPlaylist = (playlist_id) => $.ajax({
+        //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
+        url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            type: playlist_id,
+            q: playlist_id,
+            data: {
+                type: artist,
+                q: name
+            }
+        }
+    });
 });
 
 //a diff attempt to GET playlist from API
-handlePlaylistSubmit(event) {
-    event.preventDefault();
-    let jsonData = {
-        name: event.target.playlistName.value,
-        public: false,
-        description: event.target.playlistDescription.value
-    }
-
-    axios({
-        method: 'post',
-        url: 'https://api.spotify.com/v1/users/${this.state.userReducer.SpotifyId}/playlists',
-        data: jsonData,
-        dataType: 'json',
-        headers: {
-            'Authorization': 'Bearer ' + this.state.userReducer.accessToken,
-            'Content-Type': 'application/json'
-        }
-    }).then(res => {
-        const data = {
-            name: res.data.name,
-            externalUrl: res.data.external_urls.spotify,
-            playlistId: res.data.id,
-            userId: this.status.userReducer.id
-        }
-        console.log(data);
-    });
+handlePlaylistSubmit(event)
+event.preventDefault();
+let jsonData = {
+    name: event.target.playlistName.value,
+    public: false,
+    description: event.target.playlistDescription.value
 }
+
+axios({
+    method: 'post',
+    url: 'https://api.spotify.com/v1/users/${this.state.userReducer.SpotifyId}/playlists',
+    data: jsonData,
+    dataType: 'json',
+    headers: {
+        'Authorization': 'Bearer ' + this.state.userReducer.accessToken,
+        'Content-Type': 'application/json'
+    }
+}).then(res => {
+    const data = {
+        name: res.data.name,
+        externalUrl: res.data.external_urls.spotify,
+        playlistId: res.data.id,
+        userId: this.status.userReducer.id
+    }
+    console.log(data);
+});
+
 
 
 // app.getAlbums = (albums) => $.ajax({
@@ -139,4 +245,3 @@ handlePlaylistSubmit(event) {
 //     }
 //     return randomResults;
 // }
-
