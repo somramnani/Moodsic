@@ -4,7 +4,7 @@
 // const app = {};
 
 // var id = "4562bd2994224fa4bf912981be4699d1"
-
+const app = require("server.js");
 // attempt to GET playlist info from API
 $("#happyButton").on("click", function () {
     app.getPlaylist = (playlist_id) => $.ajax({
