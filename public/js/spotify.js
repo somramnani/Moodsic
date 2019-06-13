@@ -127,13 +127,13 @@ $("#tiredButton").on("click", function () {
 });
 
 //a diff attempt to GET playlist from API
-handlePlaylistSubmit(event)
+function handlePlaylistSubmit(event){
 event.preventDefault();
 let jsonData = {
     name: event.target.playlistName.value,
     public: false,
     description: event.target.playlistDescription.value
-}
+}};
 
 axios({
     method: 'post',
