@@ -1,4 +1,3 @@
-// const db = require("../models");
 const passport = require("../config/passport");
 
 module.exports = (app) => {
@@ -28,6 +27,7 @@ module.exports = (app) => {
     passport.authenticate('spotify', { failureRedirect: '/api/login' }),
     function(req, res) {
       res.redirect('/accounts');
+      console.log(req.user);
     }
   );
 

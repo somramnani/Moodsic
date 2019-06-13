@@ -2,6 +2,7 @@
 var passport = require('passport');
 var path = require("path");
 var app = require("../server");
+
 module.exports = function (app) {
 
   function ensureAuthenticated(req, res, next) {
@@ -18,9 +19,8 @@ module.exports = function (app) {
   app.get("/accounts", ensureAuthenticated, function(req, res) {
     res.render('testpage', {
       msg: "hi there",
-      profile: req.user.username,
+      profile: req.user.SpotifyId,
      });
-     console.log(req.user._json.href)
   })
 
   // My Account Page

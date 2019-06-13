@@ -1,9 +1,10 @@
 //we import passport packages required for authentication
 const passport = require("passport");
 const SpotifyStrategy = require("passport-spotify").Strategy;
+const db = require('../models');
 
 //We will need the models folder to check passport agains
-const db = require("../models");
+// const db = require("../models");
 //
 // Telling passport we want to use a Local Strategy. In other words,
 //we want login with a username/email and password
@@ -15,16 +16,16 @@ passport.use(new SpotifyStrategy({
   (accessToken, refreshToken, expires_in, profile, done) => {
     process.nextTick(() => {
       console.log('you are logged into spotify as ' + profile.username);
-      console.log(accessToken)
-      return done(null, profile);
+
+      User.findOrCreate({
+        where: {
+          SpotifyId: profile.id
+        },
+      }).spread(function(user) {
+        console.log("Creating User: ", user)
+        done(null, user);
+      })
     })
-    passport.serializeUser((user, cb) => {
-      cb(null, user);
-    });
-    //
-    passport.deserializeUser((obj, cb) => {
-      cb(null, obj);
-    });
   }
 ));
 
@@ -39,4 +40,5 @@ passport.deserializeUser((obj, cb) => {
   cb(null, obj);
 });
 // // Exporting our configured passport
+module.exports = SpotifyStrategy;
 module.exports = passport;
