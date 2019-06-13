@@ -1,6 +1,5 @@
-const db = require("../models");
+// const db = require("../models");
 const passport = require("../config/passport");
-const accessToken = "BQChnGIvz4V0Cxzrex0g_PGtcnZNQuXZDkjc4DCmz0Sm1_j3oHlmsBnk0Dy3AocDtfLnrOWCKbF3KwD6iMDq_kV-arVVeViG3KIiblr-t_fgBht4xI4y5ZKHsmJt3y6e5q764sPTWcFgm-OZZJwb_ggUjbwvCa6nKI-RClPXAJzUJZ1eKWZY9auib2H1Zyfc2qDs5nklE5gnp0mlpYc3A90hlKRGGA"
 
 module.exports = (app) => {
 

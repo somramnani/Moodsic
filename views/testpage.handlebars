@@ -37,7 +37,7 @@
                 <!-- Playlist  -->
                 <div class="card">
                     <div class="card-header text-center">
-                       {{profile}}'s Mood Playlist
+                        {{profile}}'s Mood Playlist
                     </div>
                     <div class="card-body">
                         <table class="table table-hover" id='playlist-table'>
@@ -54,20 +54,20 @@
                             </tbody>
                         </table>
                         <script>
-                          var OAUTH = "BQChnGIvz4V0Cxzrex0g_PGtcnZNQuXZDkjc4DCmz0Sm1_j3oHlmsBnk0Dy3AocDtfLnrOWCKbF3KwD6iMDq_kV-arVVeViG3KIiblr-t_fgBht4xI4y5ZKHsmJt3y6e5q764sPTWcFgm-OZZJwb_ggUjbwvCa6nKI-RClPXAJzUJZ1eKWZY9auib2H1Zyfc2qDs5nklE5gnp0mlpYc3A90hlKRGGA"
-                          function getPlaylist() {
-                          $.ajax('https://api.spotify.com/v1/users/tonyguy66/playlists', {
-                          headers: {
-                          "Authorization": "Bearer " + OAUTH,
-                          "content-type": "application/json"
-                          },
-                          method: "GET"
-                          }).then(function(results) {
-                          console.log(results)
-                          })
-                          }
+                            var OAUTH = "BQD2SOCn-detm-pA8IBrquh29IzKltpEF4AGgLJCBcXI6U9hZu0cDctdHzm3UCqQ8XBMigi49H6MBJvNCcAocASMZcvbphV4hl0JC5fdinvzB5mYw3ZTY9uP3Pc3oRCXVhKGL-Nfx9rlVj39dZ0"
+                            function getPlaylist() {
+                                $.ajax('https://api.spotify.com/v1/users/tonyguy66/playlists', {
+                                    headers: {
+                                        "Authorization": "Bearer " + OAUTH,
+                                        "content-type": "application/json"
+                                    },
+                                    method: "GET"
+                                }).then(function (results) {
+                                    console.log(results)
+                                })
+                            }
                         </script>
-                      <button onclick="getPlaylist()">Click to get playlist object</button>
+                        <button onclick="getPlaylist()">Click to get playlist object</button>
                     </div>
                 </div>
                 <!-- End Playlist -->
@@ -79,10 +79,10 @@
     <!-- End Container -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
