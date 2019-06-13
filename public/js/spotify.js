@@ -4,7 +4,6 @@
 const application = {};
 
 // var id = "4562bd2994224fa4bf912981be4699d1"
-const app = require("server.js");
 // attempt to GET playlist info from API
 $("#happyButton").on("click", function () {
     application.getPlaylist = (playlist_id) => $.ajax({
@@ -22,7 +21,6 @@ $("#happyButton").on("click", function () {
         }
     });
 });
-
 
 $("#sadButton").on("click", function () {
     application.getPlaylist = (playlist_id) => $.ajax({
@@ -127,13 +125,15 @@ $("#tiredButton").on("click", function () {
 });
 
 //a diff attempt to GET playlist from API
-function handlePlaylistSubmit(event){
-event.preventDefault();
-let jsonData = {
-    name: event.target.playlistName.value,
-    public: false,
-    description: event.target.playlistDescription.value
-}};
+function handlePlaylistSubmit(event) {
+    event.preventDefault();
+    let jsonData = {
+        name: event.target.playlistName.value,
+        public: false,
+        description: event.target.playlistDescription.value
+    }
+};
+handlePlaylistSubmit();
 
 axios({
     method: 'post',
