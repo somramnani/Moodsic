@@ -6,7 +6,9 @@
 // var id = "4562bd2994224fa4bf912981be4699d1"
 
 // attempt to GET playlist info from API
+$("#happyButton").on("click", function(){
 app.getPlaylist = (playlist_id) => $.ajax({
+    //playlist ID# 21THa8j9TaSGuXYNBU5tsC goes into {playlist_id} (actual playlist)
     url: 'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
     method: 'GET',
     dataType: 'json',
@@ -18,10 +20,11 @@ app.getPlaylist = (playlist_id) => $.ajax({
             q: name
         }
     }
+  });
 });
 
 //a diff attempt to GET playlist from API
-handlePlaylistSubmit(event) {
+handlePlaylistSubmit(event) 
     event.preventDefault();
     let jsonData = {
         name: event.target.playlistName.value,
@@ -47,7 +50,7 @@ handlePlaylistSubmit(event) {
         }
         console.log(data);
     });
-}
+
 
 
 // app.getAlbums = (albums) => $.ajax({
